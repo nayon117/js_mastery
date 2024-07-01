@@ -6,3 +6,4 @@ const findLargestElement = (arr) => {
 };
 let arr = [10,15,20,25,30,35,40];
 console.log(findLargestElement(arr));
+
