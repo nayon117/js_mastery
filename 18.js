@@ -9,3 +9,4 @@ const removeElementFromArray = (arr,target) =>{
 let arr = [10,15,10,20,10,25,30,10,35,40];
 let target = 10;
 console.log(removeElementFromArray(arr,target));
+
