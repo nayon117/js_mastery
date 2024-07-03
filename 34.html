@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- implement a click event on a parent element that triggers different based on which clild element is clicked -->
+
+    <ul id="myList">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+    </ul>
+
+    <script>
+      let myList = document.getElementById("myList");
+      myList.addEventListener("click", (e) => {
+        let clickedElement = e.target;
+        if (clickedElement.tagName === "LI") {
+          console.log("item clicked ", clickedElement.textContent);
+        } else {
+          console.log("other element clicked");
+        }
+      });
+    </script>
+  </body>
+</html>
