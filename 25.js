@@ -18,3 +18,4 @@ const totalValue2 = Product2.calculateTotalValue()
 
 console.log(`Total value of ${Product1.name} is $${totalValue}`);
 console.log(`Total value of ${Product2.name} is $${totalValue2}`);
+
