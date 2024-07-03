@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- create a countdown that start with 60 seconds and goes to 00.when it reach to 00 alert that the countdown is completed.use setInterval -->
+     <h1>Countdown Timer</h1>
+     <div id="timer">--:--</div>
+
+     <script>
+        const timer = document.getElementById("timer")
+        let countdownSeconds = 60;
+
+        function updateTimerDisplay() {
+            const minutes = Math.floor(countdownSeconds/60);
+            const seconds= countdownSeconds%60;
+            const formattedTime = `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`
+            timer.textContent=formattedTime
+        }
+        function countDown () {
+            if(countdownSeconds>0){
+                countdownSeconds--;
+                updateTimerDisplay();
+            }else{
+                clearInterval(timerInterval)
+                alert(`countdown completed`)
+            }
+        }
+        updateTimerDisplay()
+        const timerInterval = setInterval(countDown,1000)
+     </script>
+</body>
+</html>
+<!-- write the js code to implement quote changing feature -->
