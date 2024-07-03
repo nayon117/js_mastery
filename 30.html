@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="gallary"></div>
+    <script>
+        // create an image gallary using dynamic generated elements
+        function createImageElement(src){
+            let img= document.createElement('img')
+            img.src=src
+            return img;
+        }
+
+        let gallary= document.getElementById('gallary')
+        let imageUrl = [
+          "./images/1.webp",
+          "./images/2.webp",
+          "./images/3.jfif",
+        ];
+        imageUrl.forEach(url=>gallary.appendChild(createImageElement(url)))
+        
+    </script>
+  </body>
+</html>
