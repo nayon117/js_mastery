@@ -15,3 +15,4 @@ const person = {
 
 const {name,...age} = person;
 console.log(age);
+
